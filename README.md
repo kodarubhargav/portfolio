@@ -26,7 +26,7 @@ npm run build
 ## Deploy to GitHub Pages
 
 1. Create a GitHub repository and push this folder.
-2. If you want the site to live at `https://<username>.github.io/<repo>/`, update `base` in `vite.config.js` to `"/<repo>/"`.
+2. This project is currently configured for a repository named `portfolio`, so the site path is `https://<username>.github.io/portfolio/`.
 3. If you want automatic deployment on every push to `main`, keep the included workflow at `.github/workflows/deploy.yml` and enable GitHub Pages in the repository settings.
 4. Install dependencies:
 
