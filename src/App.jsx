@@ -201,12 +201,12 @@ function App() {
           <div className="hero-copy reveal">
             <p className="eyebrow">Data Engineer • Analytics Engineer • Databricks • Snowflake</p>
             <h1>
-              I build scalable data systems for <span>clean analytics</span> and better decisions.
+              Bhargav builds scalable data platforms for <span>analytics</span>, AI, and better decisions.
             </h1>
             <p className="hero-text">
-              I’m Bhargav Kodaru, a data engineer focused on ETL pipelines, analytics
-              engineering, cloud data platforms, and QA-first workflows that help teams trust
-              their reporting, forecasting, and business insights.
+              Data Engineer and Data Analyst with 4+ years of experience in SQL, Python,
+              Databricks, AWS, Azure, and Snowflake, building reliable ETL pipelines,
+              analytics-ready datasets, and AI-enabled data solutions using LLMs and RAG.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#experience">
