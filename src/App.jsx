@@ -70,12 +70,16 @@ const education = [
     location: "Worcester, Massachusetts",
     degree: "Master of Science in Data Analytics",
     period: "Jan 2024 - Dec 2025",
+    detail:
+      "Focused on statistical modeling, machine learning, data engineering, and business intelligence with coursework aligned to modern analytics and cloud data workflows.",
   },
   {
     school: "Sir Padampat Singhania University",
     location: "Hyderabad, Telangana",
-    degree: "Bachelor's in computer science",
+    degree: "Bachelor's in Computer Science",
     period: "Jun 2018 - Jun 2022",
+    detail:
+      "Built a strong foundation in programming, databases, software engineering, and analytical problem-solving that later shaped my work in data engineering and analytics.",
   },
 ];
 
@@ -235,21 +239,23 @@ function App() {
         <section className="section about-section" id="about">
           <div className="section-heading reveal compact-heading">
             <p className="section-label">About</p>
-            <h2>Modern data engineering with strong validation, performance, and business context.</h2>
+            <h2>Modern data engineering grounded in reliability, performance, and business impact.</h2>
           </div>
 
           <div className="about-layout">
             <article className="about-card reveal">
               <p>
-                I specialize in designing SQL- and Python-driven data pipelines that transform raw
-                business data into clean, reusable, analytics-ready assets. My recent work spans
-                Databricks, Snowflake-style warehousing, cloud analytics ecosystems, and validation
-                frameworks that improve trust in reporting and downstream decision-making.
+                I specialize in designing SQL- and Python-driven data pipelines that transform raw,
+                distributed business data into clean, reusable, analytics-ready assets. My recent
+                work spans Databricks, Snowflake-style warehousing, cloud analytics ecosystems,
+                and validation frameworks that improve trust in reporting and downstream
+                decision-making.
               </p>
               <p>
                 I enjoy building systems that are not only technically scalable, but also easier for
-                analysts, stakeholders, and teams to understand and use. My focus is always on
-                clear modeling, strong data quality, and measurable business impact.
+                analysts, stakeholders, and cross-functional teams to understand and use. My
+                focus is on clear data modeling, dependable quality controls, and measurable
+                business outcomes across analytics, reporting, and operational workflows.
               </p>
               <div className="pill-row">
                 {specialties.map((item) => (
@@ -311,6 +317,7 @@ function App() {
                 <p className="education-location">{item.location}</p>
                 <p className="education-degree">{item.degree}</p>
                 <p className="education-period">{item.period}</p>
+                <p className="education-detail">{item.detail}</p>
               </article>
             ))}
           </div>

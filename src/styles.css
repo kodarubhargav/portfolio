@@ -480,6 +480,12 @@ h1 span,
   color: var(--cyan);
 }
 
+.education-detail {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
 .credential-card p {
   color: var(--muted);
 }
