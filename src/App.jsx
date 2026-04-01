@@ -201,7 +201,7 @@ function App() {
           <div className="hero-copy reveal">
             <p className="eyebrow">Data Engineer • Analytics Engineer • Databricks • Snowflake</p>
             <h1>
-              Bhargav builds scalable data platforms for <span>analytics</span>, AI, and better decisions.
+              BHARGAV KODARU
             </h1>
             <p className="hero-text">
               Data Engineer and Data Analyst with 4+ years of experience in SQL, Python,
