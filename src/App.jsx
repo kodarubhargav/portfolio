@@ -75,7 +75,7 @@ const education = [
   },
   {
     school: "Sir Padampat Singhania University",
-    location: "Hyderabad, Telangana",
+    location: "Udaipur, Rajasthan",
     degree: "Bachelor's in Computer Science",
     period: "Jun 2018 - Jun 2022",
     detail:
@@ -217,7 +217,6 @@ function App() {
 
           <div className="hero-visual reveal">
             <div className="portrait-wrap">
-              <div className="portrait-glow"></div>
               <img
                 className="portrait"
                 src={`${import.meta.env.BASE_URL}bhargav-kodaru-profile.png`}

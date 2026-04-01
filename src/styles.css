@@ -241,26 +241,16 @@ h1 span,
   position: relative;
   width: min(100%, 430px);
   overflow: hidden;
-  border: 1px solid var(--line-strong);
-  background: linear-gradient(180deg, rgba(19, 26, 42, 0.95), rgba(10, 14, 23, 0.96));
-}
-
-.portrait-glow {
-  position: absolute;
-  inset: auto -8% -12% 35%;
-  height: 220px;
-  background: radial-gradient(circle, rgba(123, 212, 255, 0.22), transparent 62%);
-  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #141924;
 }
 
 .portrait {
-  position: relative;
-  z-index: 2;
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 18%;
-  filter: saturate(0.94) contrast(0.98) brightness(0.98);
+  object-position: center 20%;
+  filter: saturate(0.88) contrast(0.97) brightness(1);
 }
 
 .stats-band {
