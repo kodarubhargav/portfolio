@@ -121,6 +121,8 @@ a {
 .experience-card,
 .project-card,
 .skill-card,
+.education-card,
+.credential-card,
 .contact-card,
 .stat-card {
   background: linear-gradient(180deg, rgba(16, 21, 34, 0.94), rgba(11, 15, 25, 0.94));
@@ -133,6 +135,8 @@ a {
 .experience-card,
 .project-card,
 .skill-card,
+.education-card,
+.credential-card,
 .contact-card,
 .stat-card,
 .portrait-wrap {
@@ -143,6 +147,8 @@ a {
 .about-card,
 .project-card,
 .skill-card,
+.education-card,
+.credential-card,
 .contact-card {
   padding: 2rem;
 }
@@ -334,7 +340,9 @@ h1 span,
 
 .experience-list,
 .projects-grid,
-.skills-grid {
+.skills-grid,
+.education-grid,
+.credentials-grid {
   display: grid;
   gap: 1.4rem;
 }
@@ -415,6 +423,11 @@ h1 span,
   grid-template-columns: repeat(2, 1fr);
 }
 
+.education-grid,
+.credentials-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .project-card {
   min-height: 100%;
 }
@@ -446,6 +459,39 @@ h1 span,
   grid-template-columns: repeat(2, 1fr);
 }
 
+.education-card h3,
+.credential-card h3 {
+  font-size: 1.6rem;
+}
+
+.education-location {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
+
+.education-degree {
+  margin: 1rem 0 0;
+  color: rgba(238, 242, 255, 0.92);
+  font-weight: 700;
+}
+
+.education-period {
+  margin: 0.45rem 0 0;
+  color: var(--cyan);
+}
+
+.credential-card p {
+  color: var(--muted);
+}
+
+.credential-card a {
+  display: inline-flex;
+  margin-top: 1rem;
+  color: var(--cyan);
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .contact-card {
   text-align: center;
   background:
@@ -469,6 +515,8 @@ h1 span,
   .experience-card,
   .projects-grid,
   .skills-grid,
+  .education-grid,
+  .credentials-grid,
   .stats-band {
     grid-template-columns: 1fr;
   }
@@ -498,6 +546,8 @@ h1 span,
   .about-card,
   .project-card,
   .skill-card,
+  .education-card,
+  .credential-card,
   .contact-card,
   .stat-card,
   .experience-card {

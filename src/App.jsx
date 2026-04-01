@@ -20,7 +20,7 @@ const experience = [
   {
     role: "Data Analytics Engineer",
     company: "Wesco International",
-    period: "Sep 2024 - Present",
+    period: "Jan 2025 - Present",
     highlight: "40%",
     highlightLabel: "Query Performance Boost",
     points: [
@@ -35,8 +35,8 @@ const experience = [
   },
   {
     role: "Data Engineer / Data Analyst",
-    company: "Tata Consulting Services",
-    period: "May 2022 - Dec 2023",
+    company: "Persistent Systems, India",
+    period: "Jan 2022 - Dec 2023",
     highlight: "30%",
     highlightLabel: "Faster Processing",
     points: [
@@ -51,7 +51,7 @@ const experience = [
   {
     role: "Junior Data Engineer",
     company: "Tata Consulting Services",
-    period: "June 2021 - May 2022",
+    period: "June 2021 - Dec 2022",
     highlight: "30%",
     highlightLabel: "Efficiency Increase",
     points: [
@@ -61,6 +61,40 @@ const experience = [
       "Automated CI/CD and workflow orchestration using Airflow, Terraform, and Azure DevOps, ensuring reliable deployments across environments.",
     ],
     tags: ["Databricks", "Azure Synapse", "Snowflake", "AWS Redshift", "Airflow", "Azure DevOps"],
+  },
+];
+
+const education = [
+  {
+    school: "Clark University",
+    location: "Worcester, Massachusetts",
+    degree: "Master of Science in Data Analytics",
+    period: "Jan 2024 - Dec 2025",
+  },
+  {
+    school: "Sir Padampat Singhania University",
+    location: "Hyderabad, Telangana",
+    degree: "Bachelor's in computer science",
+    period: "Jun 2018 - Jun 2022",
+  },
+];
+
+const credentials = [
+  {
+    label: "Publication",
+    title: "Predicting and Enhancing the Fluctuations of Cryptocurrency using algorithms",
+    description:
+      "Research publication focused on cryptocurrency fluctuation analysis and predictive modeling.",
+    href: "https://www.ijaresm.com/uploaded_files/document_file/Ayush_RaizadawDFH.pdf",
+    linkText: "Open publication",
+  },
+  {
+    label: "Certification",
+    title: "Microsoft Azure Fundamentals (AZ-900)",
+    description:
+      "Microsoft credential validating cloud concepts, Azure services, pricing, governance, and foundational platform knowledge.",
+    href: "https://www.credly.com/badges/0428f7df-3bd6-413e-b886-c774c373623e/public_url",
+    linkText: "View credential",
   },
 ];
 
@@ -150,8 +184,10 @@ function App() {
         <nav className="nav">
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
+          <a href="#credentials">Credentials</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -262,6 +298,24 @@ function App() {
           </div>
         </section>
 
+        <section className="section" id="education">
+          <div className="section-heading reveal">
+            <p className="section-label">Education</p>
+            <h2>Academic foundation in analytics, engineering, and modern data systems.</h2>
+          </div>
+
+          <div className="education-grid">
+            {education.map((item) => (
+              <article className="education-card reveal" key={`${item.school}-${item.degree}`}>
+                <h3>{item.school}</h3>
+                <p className="education-location">{item.location}</p>
+                <p className="education-degree">{item.degree}</p>
+                <p className="education-period">{item.period}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className="section" id="projects">
           <div className="section-heading reveal">
             <p className="section-label">Projects</p>
@@ -307,6 +361,26 @@ function App() {
                     </span>
                   ))}
                 </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section" id="credentials">
+          <div className="section-heading reveal">
+            <p className="section-label">Credentials</p>
+            <h2>Publications and certifications that support my data and cloud engineering profile.</h2>
+          </div>
+
+          <div className="credentials-grid">
+            {credentials.map((item) => (
+              <article className="credential-card reveal" key={item.title}>
+                <p className="section-label">{item.label}</p>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <a href={item.href} target="_blank" rel="noreferrer">
+                  {item.linkText}
+                </a>
               </article>
             ))}
           </div>
