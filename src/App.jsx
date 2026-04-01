@@ -244,17 +244,23 @@ function App() {
           <div className="about-layout">
             <article className="about-card reveal">
               <p>
-                I specialize in designing SQL- and Python-driven data pipelines that transform raw,
-                distributed business data into clean, reusable, analytics-ready assets. My recent
-                work spans Databricks, Snowflake-style warehousing, cloud analytics ecosystems,
-                and validation frameworks that improve trust in reporting and downstream
-                decision-making.
+                Hello! I&apos;m Bhargav Kodaru, a Data Engineer and Data Analyst with 4+ years of
+                experience building scalable data pipelines and analytics solutions. I specialize in
+                SQL, Python, Databricks, and cloud platforms like AWS, Azure, and Snowflake, with
+                strong expertise in ETL/ELT workflows, data quality frameworks, and analytics
+                engineering.
               </p>
               <p>
-                I enjoy building systems that are not only technically scalable, but also easier for
-                analysts, stakeholders, and cross-functional teams to understand and use. My
-                focus is on clear data modeling, dependable quality controls, and measurable
-                business outcomes across analytics, reporting, and operational workflows.
+                I have hands-on experience working with healthcare and enterprise datasets,
+                developing reliable data models that support analytics and decision-making. I also
+                work at the intersection of data engineering and AI, building solutions using Large
+                Language Models (LLMs) and Retrieval-Augmented Generation (RAG) to enable
+                intelligent data access and automation.
+              </p>
+              <p>
+                I focus on transforming raw data into high-quality, analytics-ready datasets while
+                optimizing performance, ensuring data reliability, and enabling scalable,
+                future-ready data platforms.
               </p>
               <div className="pill-row">
                 {specialties.map((item) => (
