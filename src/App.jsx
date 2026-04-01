@@ -427,6 +427,10 @@ function App() {
             </a>
           </div>
         </section>
+
+        <footer className="site-footer reveal">
+          © 2026 BHARGAVKODARU. All rights reserved.
+        </footer>
       </main>
     </div>
   );

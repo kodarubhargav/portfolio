@@ -495,6 +495,13 @@ h1 span,
     linear-gradient(180deg, rgba(16, 21, 34, 0.96), rgba(10, 14, 23, 0.96));
 }
 
+.site-footer {
+  padding: 2.5rem 0 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
