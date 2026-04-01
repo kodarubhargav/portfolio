@@ -19,39 +19,48 @@ const specialties = [
 const experience = [
   {
     role: "Data Analytics Engineer",
-    company: "Wesco International, USA",
-    period: "Jan 2025 - Present",
-    highlight: "45%",
-    highlightLabel: "Query performance boost",
-    summary:
-      "At Wesco, I design scalable ETL and analytics workflows using SQL, Python, Databricks, and cloud data platforms to move raw operational data into validated, analytics-ready datasets. My work focuses on reliable modeling, automated quality checks, and faster reporting for sales, inventory, logistics, and planning use cases.",
-    detail:
-      "I build reusable transformation pipelines, optimize query performance, and support forecasting and KPI reporting with governed data structures that are easier for analysts and business teams to trust and reuse.",
-    tags: ["Databricks", "SQL", "Python", "Snowflake", "Great Expectations", "Power BI"],
+    company: "Wesco International",
+    period: "Sep 2024 - Present",
+    highlight: "40%",
+    highlightLabel: "Query Performance Boost",
+    points: [
+      "Designed and developed scalable ETL pipelines using Azure Databricks (PySpark, Scala), Azure Data Factory (ADF), and AWS Glue to process large-scale telemetry, manufacturing, and supply chain data into Azure Data Lake Storage (ADLS) and AWS S3, improving data reliability and analytics efficiency.",
+      "Built real-time streaming pipelines using Azure Event Hubs, Stream Analytics, Azure Functions, and AWS Kinesis + Lambda to capture operational metrics, enabling near real-time visibility and predictive monitoring.",
+      "Architected a multi-cloud data lake integrating ADF, Synapse Analytics, Snowflake, and AWS Redshift, supporting product performance analytics, yield optimization, and anomaly detection.",
+      "Automated workflows using Apache Airflow, ADF Pipelines, and AWS Step Functions, streamlining data ingestion and transformation from IoT and manufacturing systems.",
+      "Implemented data security and compliance using Azure RBAC, Managed Identities, ADLS Encryption, and AWS IAM + S3 Encryption.",
+      "Developed validation frameworks with Python and Great Expectations, integrated into Azure DevOps and AWS CodePipeline/Terraform, ensuring data integrity across environments.",
+    ],
+    tags: ["Azure", "Databricks", "AWS", "Airflow", "ADF", "Terraform", "Snowflake", "Redshift"],
   },
   {
     role: "Data Engineer / Data Analyst",
-    company: "Persistent Systems, India",
-    period: "Jan 2022 - Dec 2023",
+    company: "Tata Consulting Services",
+    period: "May 2022 - Dec 2023",
     highlight: "30%",
-    highlightLabel: "Less manual reporting effort",
-    summary:
-      "At Persistent Systems, I worked on SQL-driven ETL and analytics pipelines for marketing, media, and sales datasets used in attribution, campaign analysis, and unified measurement reporting. The role combined transformation logic, data validation, and scalable dataset design for high-volume analytics delivery.",
-    detail:
-      "I automated recurring ingestion and validation workflows with Python, created harmonized analytical datasets, and improved processing efficiency for large reporting pipelines while supporting Tableau-based business insights.",
-    tags: ["ETL", "Python", "SQL", "Marketing Analytics", "Tableau", "Attribution"],
+    highlightLabel: "Faster Processing",
+    points: [
+      "Designed and developed end-to-end ETL pipelines using Azure Databricks (PySpark, Scala), Azure Data Factory (ADF), and AWS Glue to process large-scale financial and transactional data, improving data accessibility and analytics readiness.",
+      "Built real-time streaming pipelines with Azure Event Hubs, Stream Analytics, and AWS Kinesis for regulatory dashboards and risk monitoring.",
+      "Integrated a multi-cloud data lake (ADLS + S3) with Snowflake and Synapse Analytics, supporting unified financial reporting and self-service BI.",
+      "Collaborated with analysts and data scientists to model datasets aligned with financial KPIs, powering insights through Power BI and Tableau dashboards.",
+      "Automated CI/CD data workflows using Airflow, Azure DevOps, and Terraform, enhancing deployment reliability and scalability.",
+    ],
+    tags: ["Azure", "Databricks", "ADF", "AWS Glue", "Snowflake", "Power BI", "Terraform"],
   },
   {
     role: "Junior Data Engineer",
-    company: "TCS, India",
-    period: "Jun 2021 - Dec 2022",
-    highlight: "QA",
-    highlightLabel: "Validation-first delivery",
-    summary:
-      "At TCS, I supported data extraction, transformation, and reconciliation workflows for operational and campaign reporting. This experience strengthened my foundation in data cleaning, metric consistency, and the discipline required to deliver dependable BI-ready datasets.",
-    detail:
-      "I contributed Python-based cleaning scripts, supported reporting pipelines for Power BI and Tableau, and documented validation and transformation logic so analytics workflows remained stable and repeatable.",
-    tags: ["Python", "SQL", "Power BI", "Tableau", "Data Quality"],
+    company: "Tata Consulting Services",
+    period: "June 2021 - May 2022",
+    highlight: "30%",
+    highlightLabel: "Efficiency Increase",
+    points: [
+      "Developed ETL pipelines using Azure Databricks (PySpark, Scala), Azure Data Factory, and AWS Glue to process large-scale telemetry and operational data into ADLS and AWS S3, increasing efficiency by 30%.",
+      "Built real-time streaming pipelines using Azure Event Hubs, Stream Analytics, and AWS Kinesis + Lambda to monitor production line data and detect anomalies.",
+      "Modeled and optimized data warehouses in Azure Synapse, Snowflake, and AWS Redshift using Star/Snowflake schemas for predictive reporting and efficiency tracking.",
+      "Automated CI/CD and workflow orchestration using Airflow, Terraform, and Azure DevOps, ensuring reliable deployments across environments.",
+    ],
+    tags: ["Databricks", "Azure Synapse", "Snowflake", "AWS Redshift", "Airflow", "Azure DevOps"],
   },
 ];
 
@@ -163,14 +172,6 @@ function App() {
               <a className="button button-primary" href="#experience">
                 Explore Experience
               </a>
-              <a
-                className="button button-secondary"
-                href={`${import.meta.env.BASE_URL}Bhargav_Kodaru_Resume_Updated.docx`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Download Resume
-              </a>
             </div>
           </div>
 
@@ -231,16 +232,19 @@ function App() {
             <h2>Professional journey focused on <span>data platforms</span>, analytics, and quality.</h2>
           </div>
 
-          <div className="experience-list">
+          <div className="experience-list detailed-list">
             {experience.map((item) => (
-              <article className="experience-card reveal" key={`${item.company}-${item.role}`}>
+              <article className="experience-card detailed-card reveal" key={`${item.company}-${item.role}`}>
                 <div className="experience-copy">
                   <h3>{item.role}</h3>
-                  <p className="experience-meta">
-                    {item.company} <span>{item.period}</span>
+                  <p className="experience-meta colorful-meta">
+                    <span className="company-name">{item.company}</span>, <span>{item.period}</span>
                   </p>
-                  <p>{item.summary}</p>
-                  <p>{item.detail}</p>
+                  <div className="experience-points">
+                    {item.points.map((point) => (
+                      <p key={point}>{point}</p>
+                    ))}
+                  </div>
                   <div className="pill-row small-gap">
                     {item.tags.map((tag) => (
                       <span className="pill muted-pill" key={tag}>
@@ -319,9 +323,6 @@ function App() {
             <a className="button button-primary" href="mailto:bhargav.kodaru@gmail.com">
               bhargav.kodaru@gmail.com
             </a>
-            <a className="button button-secondary" href="tel:+18605404423">
-              +1 (860) 540-4423
-            </a>
             <a
               className="button button-secondary"
               href="https://www.linkedin.com/in/bhargav-kodaru"
@@ -329,6 +330,14 @@ function App() {
               rel="noreferrer"
             >
               LinkedIn
+            </a>
+            <a
+              className="button button-secondary"
+              href="https://github.com/kodarubhargav"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
             </a>
           </div>
         </section>

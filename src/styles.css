@@ -10,6 +10,8 @@
   --cyan: #7bd4ff;
   --blue: #5c7cff;
   --lavender: #9b8cff;
+  --green: #59d98e;
+  --gold: #f0c65b;
   --shadow: 0 26px 80px rgba(0, 0, 0, 0.34);
   --radius-xl: 32px;
   --radius-lg: 24px;
@@ -281,7 +283,7 @@ h1 span,
 
 .section-heading {
   margin-bottom: 1.6rem;
-  max-width: 820px;
+  max-width: 860px;
 }
 
 .section-heading h2,
@@ -337,11 +339,19 @@ h1 span,
   gap: 1.4rem;
 }
 
+.detailed-list {
+  gap: 2rem;
+}
+
 .experience-card {
   display: grid;
   grid-template-columns: 1fr 170px;
   gap: 1.5rem;
   padding: 1.7rem;
+  align-items: start;
+}
+
+.detailed-card {
   align-items: start;
 }
 
@@ -357,8 +367,29 @@ h1 span,
   font-weight: 700;
 }
 
-.experience-meta span {
-  color: #f0c55c;
+.colorful-meta {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
+.company-name {
+  color: var(--cyan);
+}
+
+.colorful-meta span:last-child {
+  color: var(--gold);
+}
+
+.experience-points {
+  display: grid;
+  gap: 1.35rem;
+  margin-top: 1.25rem;
+}
+
+.experience-points p {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: rgba(238, 242, 255, 0.88);
 }
 
 .experience-aside {
