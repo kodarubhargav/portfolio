@@ -56,7 +56,7 @@ const experience = [
   {
     role: "Junior Data Engineer",
     company: "Tata Consulting Services",
-    period: "June 2021 - Dec 2022",
+    period: "June 2021 - Dec 2021",
     highlight: "30%",
     highlightLabel: "Efficiency Increase",
     points: [
